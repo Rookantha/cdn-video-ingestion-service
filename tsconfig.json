@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",                          // Specifies the target JavaScript version
+      "module": "CommonJS",                        // Use CommonJS module resolution
+      "moduleResolution": "node",                  // Use Node.js module resolution strategy
+      "esModuleInterop": true,                     // Enable compatibility with CommonJS modules
+      "skipLibCheck": true,                        // Skip type checking of declaration files
+      "forceConsistentCasingInFileNames": true,    // Enforce consistent casing in file names
+      "outDir": "./dist",                          // Output directory for compiled files
+      "strict": true                               // Enable all strict type-checking options
+    },
+    "include": [
+      "src/**/*.ts"                                // Include all TypeScript files in the `src` folder
+    ]
+  }
+  
