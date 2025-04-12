@@ -10,7 +10,6 @@ interface VideoJobData {
   mimetype: string;
   metadata: {
     title: string;
-    description: string;
     duration: string;
     resolution: string;
   };
@@ -51,6 +50,8 @@ export const videoUploadProcessor = async (job: Job<VideoJobData>) => {
             videoId: video._id,
             title: video.title,
             s3Url: video.s3Url,
+            duration: video.duration,
+            resolution: video.resolution,
           }),
         },
       ],

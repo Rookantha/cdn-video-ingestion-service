@@ -4,7 +4,7 @@ import { videoUploadQueue } from '../config/queue';
 export const uploadVideo = async (req: Request, res: Response) => {
   try {
     const file = req.file!;
-    const { title, description, duration, resolution } = req.body;
+    const { title, duration, resolution } = req.body;
 
     // Add video upload to the Bull queue
     await videoUploadQueue.add({
@@ -13,7 +13,6 @@ export const uploadVideo = async (req: Request, res: Response) => {
       mimetype: file.mimetype,
       metadata: {
         title,
-        description,
         duration,
         resolution,
       },

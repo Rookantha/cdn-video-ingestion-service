@@ -1,7 +1,5 @@
 import { s3 } from '../config/aws';
-import { Request } from 'express';
 import fs from 'fs';
-import path from 'path';
 
 export const uploadToS3 = async (file: Express.Multer.File) => {
   const fileStream = fs.createReadStream(file.path);
